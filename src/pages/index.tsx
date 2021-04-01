@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Home () {
   return (
     <div>
-      <h1>Next.js</h1>
+      <h1>Star Wars API</h1>
     </div>
-  );
+  )
 }
