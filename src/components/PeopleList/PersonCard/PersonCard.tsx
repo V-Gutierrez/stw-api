@@ -1,7 +1,7 @@
 import React from 'react';
 import { Person } from 'types/apiTypes';
 
-export const PersonCard = (props: Person) => {
+export const PersonCard = (props: Pick<Person, "name" | "gender" | "birth_year">) => {
 const {name, gender, birth_year} = props
 
 
@@ -12,12 +12,18 @@ const {name, gender, birth_year} = props
         alt='Person'
         className='card__image'
       />
-      <p className='card__name'>{name}</p>
+      <p data-testid='name' className='card__name'>
+        {name}
+      </p>
       <div className='grid-container'>
         <div className='grid-child-stats-left'>Gender:</div>
-        <div className='grid-child-stats-right'>{gender}</div>
+        <div data-testid='gender' className='grid-child-stats-right'>
+          {gender}
+        </div>
         <div className='grid-child-stats-left'>Born in</div>
-        <div className='grid-child-stats-right'>{birth_year}</div>
+        <div data-testid='birth_year' className='grid-child-stats-right'>
+          {birth_year}
+        </div>
       </div>
       <button className='btn draw-border'>See more</button>
     </div>
