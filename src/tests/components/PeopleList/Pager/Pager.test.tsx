@@ -3,7 +3,7 @@ import Pager from '../../../../components/PeopleList/components/Pager/Pager'
 
 import React from 'react'
 
-describe('PersonCard Component', () => {
+describe('Pager Component', () => {
   const Props = {
     handleNextPage: jest.fn(),
     handlePreviousPage: jest.fn(),

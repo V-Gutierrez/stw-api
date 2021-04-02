@@ -1,8 +1,6 @@
 import { PeopleList } from 'components'
 import React from 'react'
 
-const Homepage = () => {
+export const Homepage = () => {
   return <PeopleList />
 }
-
-export default Homepage

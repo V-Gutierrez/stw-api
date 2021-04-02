@@ -21,7 +21,7 @@ export const PersonCard = (
         <div data-testid='gender' className='grid-child-stats-right'>
           {gender}
         </div>
-        <div className='grid-child-stats-left'>Born in</div>
+        <div className='grid-child-stats-left'>Born in:</div>
         <div data-testid='birth_year' className='grid-child-stats-right'>
           {birth_year}
         </div>

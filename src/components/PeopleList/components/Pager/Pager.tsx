@@ -7,7 +7,7 @@ interface PageProps {
   pageCount: number
 }
 
-const Pager = ({
+export const Pager = ({
   handleNextPage,
   handlePreviousPage,
   pageValue,
@@ -41,5 +41,3 @@ const Pager = ({
     </div>
   )
 }
-
-export default Pager
