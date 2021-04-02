@@ -1,7 +1,7 @@
+import React from 'react'
+import Homepage from 'views/Homepage/Homepage'
+
+
 export default function Home () {
-  return (
-    <div>
-      <h1>Star Wars API</h1>
-    </div>
-  )
+  return <Homepage />
 }
