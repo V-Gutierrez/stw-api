@@ -1,7 +1,5 @@
-
-
 import { render, screen } from '@testing-library/react'
-import { PersonCard } from '../../../../components/PeopleList/PersonCard'
+import { PersonCard } from '../../../../components/PeopleList/components/PersonCard'
 import React from 'react'
 
 describe('PersonCard Component', () => {
