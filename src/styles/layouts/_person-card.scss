@@ -10,7 +10,7 @@
 }
 
 .card {
-  background-color: #1C1E22;
+  background-color: $star-wars-black-background;
   height: 30rem;
   border-radius: 15px;
   display: flex;
@@ -31,21 +31,21 @@
   border-radius: 50%;
   border: 5px solid #272133;
   margin-top: 20px;
-  box-shadow: 0 10px 50px #2777B7;
+  box-shadow: 0 10px 50px $star-wars-blue-side;
 }
 
 .card__image:hover{
-  box-shadow:  0 0 0 4px #FFE300;
+  box-shadow:  0 0 0 4px $star-wars-yellow;
 }
 
 .grid-child-stats-left,.grid-child-stats-right{
-  color: #FFE300;
+  color: $star-wars-yellow;
   margin: 3.5% 0;
 }
 
 .draw-border {
-  box-shadow: inset 0 0 0 4px #2777B7;
-  color: #2777B7;
+  box-shadow: inset 0 0 0 4px $star-wars-blue-side;
+  color: $star-wars-blue-side;
   -webkit-transition: color 0.25s 0.0833333333s;
   transition: color 0.25s 0.0833333333s;
   position: relative;
