@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 interface PageProps {
   handleNextPage: () => void
@@ -7,7 +7,12 @@ interface PageProps {
   pageCount: number
 }
 
-const Pager = ({ handleNextPage, handlePreviousPage, pageValue, pageCount }: PageProps) => {
+const Pager = ({
+  handleNextPage,
+  handlePreviousPage,
+  pageValue,
+  pageCount
+}: PageProps) => {
   return (
     <div className='pager'>
       <a
@@ -37,4 +42,4 @@ const Pager = ({ handleNextPage, handlePreviousPage, pageValue, pageCount }: Pag
   )
 }
 
-export default Pager;
+export default Pager

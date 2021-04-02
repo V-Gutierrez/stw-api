@@ -34,11 +34,12 @@
   box-shadow: 0 10px 50px $star-wars-blue-side;
 }
 
-.card__image:hover{
-  box-shadow:  0 0 0 4px $star-wars-yellow;
+.card__image:hover {
+  box-shadow: 0 0 0 4px $star-wars-yellow;
 }
 
-.grid-child-stats-left,.grid-child-stats-right{
+.grid-child-stats-left,
+.grid-child-stats-right {
   color: $star-wars-yellow;
   margin: 3.5% 0;
 }
@@ -80,7 +81,7 @@
 
 .draw-border:hover::before,
 .draw-border:hover::after {
-  border-color: #E12027;
+  border-color: #e12027;
   -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
   transition: border-color 0s, width 0.25s, height 0.25s;
   width: 100%;
@@ -97,7 +98,6 @@
   transition-delay: 0s, 0.25s, 0s;
 }
 
-
 .btn {
   background: none;
   border: none;
@@ -113,7 +113,6 @@
 .btn:focus {
   outline: 2px dotted #55d7dc;
 }
-
 
 .grid-container {
   display: grid;

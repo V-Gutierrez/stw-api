@@ -14,33 +14,34 @@ export const PeopleList = () => {
 
   const handleNextPage = () => {
     if (currentPage < pageCount) {
-    setCurrentPage((prev) => prev + 1)
-    refetch()
-  }
+      setCurrentPage((prev) => prev + 1)
+      refetch()
+    }
   }
 
-   const handlePreviousPage = () => {
-     if (currentPage > 1) {
-     setCurrentPage((prev) => prev - 1)
-     refetch()
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1)
+      refetch()
     }
-   }
+  }
 
   if (error) return <h1>PeopleList</h1>
   if (loading) return <h1>PeopleList</h1>
-  if (data) return (
-    <>
-      <section className='people-container'>
-        {FETCH_PEOPLE.people(data).map((person) => (
-          <PersonCard key={person.name} {...person} />
-        ))}
-      </section>
-      <Pager
-        handleNextPage={handleNextPage}
-        handlePreviousPage={handlePreviousPage}
-        pageValue={currentPage}
-        pageCount={pageCount}
-      />
-    </>
-  )
+  if (data)
+    return (
+      <>
+        <section className='people-container'>
+          {FETCH_PEOPLE.people(data).map((person) => (
+            <PersonCard key={person.name} {...person} />
+          ))}
+        </section>
+        <Pager
+          handleNextPage={handleNextPage}
+          handlePreviousPage={handlePreviousPage}
+          pageValue={currentPage}
+          pageCount={pageCount}
+        />
+      </>
+    )
 }

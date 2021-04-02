@@ -4,11 +4,9 @@ import React from 'react'
 
 describe('PersonCard Component', () => {
   it('should render properly based on Props', () => {
-    const mockedPerson = {name: 'Foo', gender: 'male', birth_year: '1999'}
+    const mockedPerson = { name: 'Foo', gender: 'male', birth_year: '1999' }
 
-    render(
-      <PersonCard {...mockedPerson} />
-    )
+    render(<PersonCard {...mockedPerson} />)
 
     const name = screen.getByTestId('name')
     const gender = screen.getByTestId('gender')
@@ -17,6 +15,5 @@ describe('PersonCard Component', () => {
     expect(name).toHaveTextContent(mockedPerson.name)
     expect(gender).toHaveTextContent(mockedPerson.gender)
     expect(birth_year).toHaveTextContent(mockedPerson.birth_year)
- })
-
+  })
 })

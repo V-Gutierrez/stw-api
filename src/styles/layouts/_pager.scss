@@ -1,121 +1,121 @@
 .pager {
-    text-align: center;
-    background-color: #EEEEEE;
-    padding: 5% 0;
+  text-align: center;
+  background-color: #eeeeee;
+  padding: 5% 0;
 
-    > .pager__btn {
-        display: inline-block;
-        position: relative;
-        padding: 1rem 3rem;
-        transform: translateY(-.5rem);
-        text-transform: uppercase;
-        perspective: 10rem;
-        color: $star-wars-yellow;
-    }
+  > .pager__btn {
+    display: inline-block;
+    position: relative;
+    padding: 1rem 3rem;
+    transform: translateY(-0.5rem);
+    text-transform: uppercase;
+    perspective: 10rem;
+    color: $star-wars-yellow;
+  }
 
-    >.pager__btn:hover{
-      cursor: pointer;
-      color: #fff
-    }
+  > .pager__btn:hover {
+    cursor: pointer;
+    color: #fff;
+  }
 
-    > .pager__btn:first-of-type {
-        padding-left: 4rem;
-    }
+  > .pager__btn:first-of-type {
+    padding-left: 4rem;
+  }
 
-    > .pager__btn:first-of-type::before {
-        content: '';
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: rotateY(10deg) translateX(3px);
-        z-index: -1;
-        background: $star-wars-black-background;
-    }
+  > .pager__btn:first-of-type::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(10deg) translateX(3px);
+    z-index: -1;
+    background: $star-wars-black-background;
+  }
 
-    > .pager__btn:last-of-type {
-        padding-right: 4rem;
-    }
+  > .pager__btn:last-of-type {
+    padding-right: 4rem;
+  }
 
-    > .pager__btn:last-of-type::after {
-        content: '';
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: rotateY(-10deg) translateX(6px);
-        z-index: -1;
-        background: $star-wars-black-background;
-    }
+  > .pager__btn:last-of-type::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(-10deg) translateX(6px);
+    z-index: -1;
+    background: $star-wars-black-background;
+  }
 
-    > .pager__counter {
-        display: inline-block;
-        position: relative;
-        padding: .5rem 2rem;
-        color: $star-wars-yellow;
-    }
+  > .pager__counter {
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 2rem;
+    color: $star-wars-yellow;
+  }
 
-    > .pager__counter > .pager__background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        color: $star-wars-yellow;
-        background: $star-wars-black-background;
-        border-radius: .7rem;
-    }
+  > .pager__counter > .pager__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: $star-wars-yellow;
+    background: $star-wars-black-background;
+    border-radius: 0.7rem;
+  }
 
-    > .pager__counter > .pager__background::before {
-        content: '';
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        z-index: -1;
-        border-radius: 1rem;
-        border: solid $star-wars-yellow 4px;
-        background: $star-wars-black-background;
-    }
+  > .pager__counter > .pager__background::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+    border-radius: 1rem;
+    border: solid $star-wars-yellow 4px;
+    background: $star-wars-black-background;
+  }
 
-    > .pager__counter > .pager__background::after {
-        content: '';
-        width: 80%;
-        padding-top: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: -1;
-        border-radius: 50%;
-        transform: translateX(-50%) translateY(-50%);
-        border: solid #fff 4px;
-        background: $star-wars-black-background;
-    }
+  > .pager__counter > .pager__background::after {
+    content: '';
+    width: 80%;
+    padding-top: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border: solid #fff 4px;
+    background: $star-wars-black-background;
+  }
 
-    > .pager__counter > .pager__number {
-        position: relative;
-        display: inline-block;
-        z-index: 1;
-        transform: translateY(-2px);
-        color: $star-wars-yellow;
-    }
+  > .pager__counter > .pager__number {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    transform: translateY(-2px);
+    color: $star-wars-yellow;
+  }
 
-    > .pager__counter > .pager__number:first-of-type {
-        font-size: 2rem;
-    }
+  > .pager__counter > .pager__number:first-of-type {
+    font-size: 2rem;
+  }
 
-    > .pager__counter > .pager__number:first-of-type::after {
-        content: '/';
-        display: inline-block;
-        padding: 0 .2rem;
-        font-size: 2.5rem;
-    }
+  > .pager__counter > .pager__number:first-of-type::after {
+    content: '/';
+    display: inline-block;
+    padding: 0 0.2rem;
+    font-size: 2.5rem;
+  }
 
-    > .pager__counter > .pager__number:last-of-type {
-        font-size: 1rem;
-        transform: translateY(-0.8rem) translateX(-.2rem);
-    }
+  > .pager__counter > .pager__number:last-of-type {
+    font-size: 1rem;
+    transform: translateY(-0.8rem) translateX(-0.2rem);
+  }
 }

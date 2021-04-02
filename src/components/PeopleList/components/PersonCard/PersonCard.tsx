@@ -1,9 +1,10 @@
-import React from 'react';
-import { Person } from 'types/apiTypes';
+import React from 'react'
+import { Person } from 'types/apiTypes'
 
-export const PersonCard = (props: Pick<Person, "name" | "gender" | "birth_year">) => {
-const {name, gender, birth_year} = props
-
+export const PersonCard = (
+  props: Pick<Person, 'name' | 'gender' | 'birth_year'>
+) => {
+  const { name, gender, birth_year } = props
 
   return (
     <div className='card'>
