@@ -2,11 +2,7 @@ import { PeopleList } from 'components'
 import React from 'react'
 
 const Homepage = () => {
-  return (
-    <div>
-      <PeopleList />
-    </div>
-  )
+  return <PeopleList />
 }
 
 export default Homepage

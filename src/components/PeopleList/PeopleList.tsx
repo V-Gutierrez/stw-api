@@ -3,6 +3,7 @@ import useAxios from 'axios-hooks'
 import { FETCH_PEOPLE } from '../../constants/apiOperations'
 import { PersonCard } from 'components/PeopleList/components/PersonCard'
 import Pager from 'components/PeopleList/components/Pager/Pager'
+import Loading from 'components/Loading/Loading'
 
 export const PeopleList = () => {
   const [currentPage, setCurrentPage] = useState<number>(1)
@@ -26,8 +27,13 @@ export const PeopleList = () => {
     }
   }
 
-  if (error) return <h1>PeopleList</h1>
-  if (loading) return <h1>PeopleList</h1>
+  if (error) return <Loading />
+  if (loading)
+    return (
+      <section className='people-container'>
+        <Loading />
+      </section>
+    )
   if (data)
     return (
       <>
