@@ -1,0 +1,15 @@
+.error-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  > button {
+    background: $star-wars-black-background;
+    color: $star-wars-yellow;
+    padding: 2.5% 5%;
+    cursor: pointer;
+  }
+}
