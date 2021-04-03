@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import useAxios from 'axios-hooks'
-import { FETCH_PEOPLE } from '../../constants/apiOperations'
+import { FETCH_PEOPLE } from 'services/apiOperations'
 import { PersonCard } from 'components/PeopleList/components/PersonCard'
 import { Pager } from 'components/PeopleList/components/Pager/Pager'
 import { Loading } from 'components/Loading/Loading'
