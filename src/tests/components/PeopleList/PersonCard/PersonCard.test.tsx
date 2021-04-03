@@ -4,7 +4,12 @@ import React from 'react'
 
 describe('PersonCard Component', () => {
   it('should render properly based on Props', () => {
-    const mockedPerson = { name: 'Foo', gender: 'male', birth_year: '1999' }
+    const mockedPerson = {
+      name: 'Foo',
+      gender: 'male',
+      birth_year: '1999',
+      url: '_URL_'
+    }
 
     render(<PersonCard {...mockedPerson} />)
 

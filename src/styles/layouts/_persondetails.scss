@@ -1,0 +1,13 @@
+.person-details {
+  padding: 5% 2.5%;
+
+  > .person__name,
+  .person__stat {
+    color: #fff;
+  }
+
+  > .person-details__link {
+    color: $star-wars-yellow;
+    text-align: center;
+  }
+}

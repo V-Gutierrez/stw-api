@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import Error from '../../../components/ErrorComponent/ErrorComponent'
+import { ErrorComponent } from '../../../components/ErrorComponent/ErrorComponent'
 
 import React from 'react'
 
@@ -9,7 +9,7 @@ describe('ErrorComponent Component', () => {
   }
 
   it('should render properly based on Props', () => {
-    render(<Error {...Props} />)
+    render(<ErrorComponent {...Props} />)
 
     const retryButton = screen.getByTestId('retry-button')
 

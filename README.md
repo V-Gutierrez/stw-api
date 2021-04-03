@@ -9,3 +9,4 @@ Para iniciar
 -- yarn dev para rodar o projeto em ambiente desenvolvimento
 
 
+Deploy: https://stw-api.vercel.app/
