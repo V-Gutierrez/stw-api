@@ -4,6 +4,7 @@ import { Starship } from './components/Starship'
 import React, { useEffect, useState } from 'react'
 import { Person, StarshipResponse } from 'types/apiTypes'
 import Link from 'next/link'
+import { parseUrlsToHTTPS } from 'utils/parseUrlsToHTTPS'
 
 export const PersonDetails = (
   props: Pick<Person, 'name' | 'mass' | 'height' | 'starships'>
@@ -16,8 +17,10 @@ export const PersonDetails = (
 
   const fetchAllStarshipsData = async () => {
     try {
+      const parsedUrls = parseUrlsToHTTPS(starships)
+
       const fetchedItems = await Promise.all(
-        starships.map((url) => axios.get<StarshipResponse>(url))
+        parsedUrls.map((url) => axios.get<StarshipResponse>(url))
       )
 
       setStarshipsData(fetchedItems.map((response) => response.data))
