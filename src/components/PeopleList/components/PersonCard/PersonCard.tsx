@@ -1,10 +1,14 @@
 import React from 'react'
+import Link from 'next/link'
 import { Person } from 'types/apiTypes'
+import { serializeIDfromUrl } from 'utils/serializeIDfromURL'
 
 export const PersonCard = (
-  props: Pick<Person, 'name' | 'gender' | 'birth_year'>
+  props: Pick<Person, 'name' | 'gender' | 'birth_year' | 'url'>
 ) => {
-  const { name, gender, birth_year } = props
+  const { name, gender, birth_year, url } = props
+
+  const id = serializeIDfromUrl(url)
 
   return (
     <div className='card'>
@@ -26,7 +30,9 @@ export const PersonCard = (
           {birth_year}
         </div>
       </div>
-      <button className='btn draw-border'>See more</button>
+      <Link href={`person/${id}`}>
+        <button className='btn draw-border'>See more</button>
+      </Link>
     </div>
   )
 }
