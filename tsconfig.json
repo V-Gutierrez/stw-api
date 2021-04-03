@@ -24,9 +24,10 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "setupTests.js"
+    "setupTests.js",
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "cypress"
   ]
 }
