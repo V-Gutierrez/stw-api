@@ -8,4 +8,5 @@ Para iniciar
 -- yarn/npm test para rodar os testes unitários
 -- yarn dev para rodar o projeto em ambiente desenvolvimento
 
+
 Deploy: https://stw-api.vercel.app/
