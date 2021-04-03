@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Person } from 'types/apiTypes'
-import { serializeIDfromUrl } from 'utils/serializeIDfromURL'
+import { serializeIDfromUrl } from 'utils/serializeIDfromUrl'
 
 export const PersonCard = (
   props: Pick<Person, 'name' | 'gender' | 'birth_year' | 'url'>
