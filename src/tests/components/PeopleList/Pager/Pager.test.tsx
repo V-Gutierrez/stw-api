@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-import Pager from '../../../../components/PeopleList/components/Pager/Pager'
+import { Pager } from '../../../../components/PeopleList/components/Pager/Pager'
 
 import React from 'react'
 
