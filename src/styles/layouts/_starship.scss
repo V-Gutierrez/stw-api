@@ -1,0 +1,12 @@
+.starship-container {
+  color: #fff;
+
+  > ul li {
+    background: $star-wars-black-background;
+    margin: 1.25% 0;
+    padding: 2% 0;
+    text-align: center;
+    list-style: none;
+    color: $star-wars-yellow;
+  }
+}
