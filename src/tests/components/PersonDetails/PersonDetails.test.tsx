@@ -1,13 +1,15 @@
-import { render, screen } from '@testing-library/react'
+import { act, render, screen } from '@testing-library/react'
 import { PersonDetails } from '../../../components/PersonDetails/PersonDetails'
 
 import React from 'react'
 
 describe('PersonDetails Component', () => {
-  const Props = { name: 'John', height: '222', mass: '111' }
+  const Props = { name: 'John', height: '222', mass: '111', starships: [''] }
 
   it('should render properly based on Props', () => {
-    render(<PersonDetails {...Props} />)
+    act(() => {
+      render(<PersonDetails {...Props} />)
+    })
 
     const nameContainer = screen.getByTestId('name-container')
     const heightContainer = screen.getByTestId('height-container')

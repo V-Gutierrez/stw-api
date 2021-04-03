@@ -1,10 +1,33 @@
-import React from 'react'
-import { Person } from 'types/apiTypes'
+import axios from 'axios'
+import { Starship } from './components/Starship'
+
+import React, { useEffect, useState } from 'react'
+import { Person, StarshipResponse } from 'types/apiTypes'
 
 export const PersonDetails = (
-  props: Pick<Person, 'name' | 'mass' | 'height'>
+  props: Pick<Person, 'name' | 'mass' | 'height' | 'starships'>
 ) => {
-  const { name, height, mass } = props
+  const { name, height, mass, starships } = props
+
+  const [starshipsData, setStarshipsData] = useState<StarshipResponse[] | []>(
+    []
+  )
+
+  const fetchAllStarshipsData = async () => {
+    try {
+      const fetchedItems = await Promise.all(
+        starships.map((url) => axios.get<StarshipResponse>(url))
+      )
+
+      setStarshipsData(fetchedItems.map((response) => response.data))
+    } catch (error) {
+      setStarshipsData([])
+    }
+  }
+
+  useEffect(() => {
+    fetchAllStarshipsData()
+  }, [])
 
   return (
     <section className='person-details'>
@@ -17,21 +40,7 @@ export const PersonDetails = (
       <p data-testid='mass-container' className='person__stat'>
         Mass: {mass}
       </p>
-      <ul>
-        {/* Home world */}
-        {/* StarShips Component
-        TODO:
-        FOR EACH STARSHIP -> COMPONENT -> FETCH LINK AND PARSE INFORMATION DA MINHA CACETA */}
-        {/* Movies Component
-        TODO:
-        FOR EACH STARSHIP -> COMPONENT -> FETCH LINK AND PARSE INFORMATION DA MINHA CACETA */}
-        {/* Vehicles Component
-        TODO:
-        FOR EACH STARSHIP -> COMPONENT -> FETCH LINK AND PARSE INFORMATION DA MINHA CACETA */}
-        {/* Species Component
-        TODO:
-        FOR EACH STARSHIP -> COMPONENT -> FETCH LINK AND PARSE INFORMATION DA MINHA CACETA */}
-      </ul>
+      {starshipsData.length > 0 && <Starship starshipsData={starshipsData} />}
     </section>
   )
 }
