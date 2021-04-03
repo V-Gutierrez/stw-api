@@ -3,6 +3,7 @@ import { Starship } from './components/Starship'
 
 import React, { useEffect, useState } from 'react'
 import { Person, StarshipResponse } from 'types/apiTypes'
+import Link from 'next/link'
 
 export const PersonDetails = (
   props: Pick<Person, 'name' | 'mass' | 'height' | 'starships'>
@@ -41,6 +42,9 @@ export const PersonDetails = (
         Mass: {mass}
       </p>
       {starshipsData.length > 0 && <Starship starshipsData={starshipsData} />}
+      <Link href='/'>
+        <h1 className='person-details__link'>Go back</h1>
+      </Link>
     </section>
   )
 }

@@ -5,4 +5,9 @@
   .person__stat {
     color: #fff;
   }
+
+  > .person-details__link {
+    color: $star-wars-yellow;
+    text-align: center;
+  }
 }
