@@ -7,7 +7,9 @@ import { ErrorComponent, Loading, PersonDetails } from 'components'
 
 const PersonPage = () => {
   const router = useRouter()
+  
   const { id } = router.query
+
   const [{ data, loading, error }, refetch] = useAxios({
     url: FETCH_PERSON_DATA.url(id || 1)
   })
@@ -22,6 +24,7 @@ const PersonPage = () => {
         <Head>
           <title>{data.name}</title>
         </Head>
+
         <PersonDetails {...FETCH_PERSON_DATA.personData(data)} />
       </>
     )
